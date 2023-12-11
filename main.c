@@ -26,18 +26,6 @@ int main()
         A1[i] = (A1[i] > 0) ? A1[i] : 0; 
     }
 
-    for (int i = 0; i < 10; i++){ //dot production of a matrix
-        int col_sum = 0;
-        for (int j = 0; j < 3; j++) {
-            col_sum += input[j] * weights[j][i];
-        }
-        A1[i] = col_sum;
-    }
-
-    for (int j = 0; j < 10; j++){ //adding biases to the output
-        A1[j] += biases[j];
-    }
-
     for (int j = 0; j < 10; j++){
         printf("A1: %f\n", A1[j]);
     }
